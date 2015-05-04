@@ -58,7 +58,7 @@
 		<documentation>Retourne une phrase simple </documentation>
 		<!-- partie 8 : Port -->
 		<port name="HelloYouPort" binding="typens:HelloYouBinding">
-			<soap:address location="http://monDns:monPort/monChemin/server.php"/> <!-- modifier ce chemin vers server.php -->
+			<soap:address location="http://ws/server.php"/> <!-- modifier ce chemin vers server.php -->
 		</port>
 	</service>
 </definitions>

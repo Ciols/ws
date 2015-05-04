@@ -1,5 +1,5 @@
 <?php
- 
+
 // première étape : désactiver le cache lors de la phase de test
 ini_set("soap.wsdl_cache_enabled", "0");
  
@@ -11,13 +11,12 @@ $serveurSOAP->addFunction('getHello');
  
 // lancer le serveur
 if ($_SERVER['REQUEST_METHOD'] == 'POST')
- 
 {
 	$serveurSOAP->handle();
 }
 else
 {
-	echo 'désolé, je ne comprends pas les requêtes GET, veuillez seulement utiliser POST';
+	echo 'Je comprends pas les GET, veuillez seulement utiliser POST';
 }
  
 function getHello($prenom, $nom)

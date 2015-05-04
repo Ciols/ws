@@ -7,4 +7,11 @@ ini_set("soap.wsdl_cache_enabled", "0");
 $clientSOAP = new SoapClient('HelloYou.wsdl');
  
 // executer la methode getHello
-echo $clientSOAP->getHello('Marc','Assin');
+var_dump($_GET);
+if (isset($_GET['nom']) && isset($_GET['prenom'])) {
+    $nom = htmlentities($_GET['nom']);
+    $prenom = htmlentities($_GET['prenom']);
+    echo $clientSOAP->getHello($nom,$prenom);
+} else {
+    echo $clientSOAP->getHello('Monsieur','Inconnu');
+}
